@@ -1,5 +1,5 @@
 {
-    "name": "haidarvm/php-rss-generator",
+    "name": "haidarvm/php-rss-generators",
     "type": "library",
     "description": "Simple RSS generator library for PHP 5.5, 8.4 or later.",
     "keywords": [
