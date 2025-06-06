@@ -13,14 +13,15 @@ class SimpleXMLElement extends XMLElement
      * @param string $namespace
      * @return XMLElement
      */
-    public function addChild($name, $value = null, $namespace = null)
+    public function addChild(string $name, ?string $value = null, ?string $namespace = null): \SimpleXMLElement
     {
-        if ($value !== null and is_string($value) === true) {
+        if ($value !== null && is_string($value)) {
             $value = str_replace('&', '&amp;', $value);
         }
 
         return parent::addChild($name, $value, $namespace);
     }
+
 
     /**
      * Create a child with CDATA value

@@ -248,7 +248,9 @@ class Channel implements ChannelInterface
         $xml->addChild('link', $this->url);
         $xml->addChild('description', $this->description);
         $link = $xml->addChild('xmlns:atom:link');
-        $link->addAttribute('href', $this->atomLinkSelf);
+        if ($this->atomLinkSelf !== null) {
+            $link->addAttribute('href', $this->atomLinkSelf);
+        }
         $link->addAttribute('rel', 'self');
         $link->addAttribute('type', 'application/rss+xml');
 
